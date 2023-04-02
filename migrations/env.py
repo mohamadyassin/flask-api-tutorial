@@ -100,8 +100,8 @@ def run_migrations_online():
             connection=connection,
             target_metadata=get_metadata(),
             process_revision_directives=process_revision_directives,
-            compare_type=True,
             **current_app.extensions['migrate'].configure_args
+
         )
 
         with context.begin_transaction():
